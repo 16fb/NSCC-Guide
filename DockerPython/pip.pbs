@@ -12,10 +12,10 @@
 #PBS -l walltime=0:15:00
 
 ### Select correct queue
-#PBS -q dgx
+#PBS -q gpu
 
 ### Specify project code
-#PBS -P 50000163
+#PBS -P Personal
 
 ### Specify name for job
 #PBS -N pip

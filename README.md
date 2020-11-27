@@ -203,6 +203,11 @@ Of the format :
 [Rest of commands to run]
 ```
 
+## Checking Status And other commands
+To check status on your submitted jobs `qstat` will list current running jobs.
+
+To delete a job, use `qdel <job_id>`
+
 ----------
 # Running Python With Tensorflow
 Tensorflow 2.0 is a tricky module to add. <br>
