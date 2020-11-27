@@ -1,11 +1,19 @@
+## OverView
+Script file that we will use `RunPythonSingularity.pbs` \
+
+Example error and output files are the files :
+* PythonSingularity.e<job_number> 
+* SingularityContainer.e<job_number>
 ## 1) Modify Script File
 Modify the Script File:  <br />
 Select Image to use (in this case we using tensorflow): <br />
 `image="/app/singularity/images/tensorflow/tensorflow_2.3.0_gpu_py3.simg"`
 
 Choose Modules to pip install: <br />
-`pip install -U -q --user keras`
-`pip install -U -q --user matplotlib`
+```
+pip install -U -q --user keras
+pip install -U -q --user matplotlib
+```
 
 Choose Which python File to Run: <br />
 `python MNISTDataset.py`

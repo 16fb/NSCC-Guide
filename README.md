@@ -1,18 +1,27 @@
-This is a .md file, view in a markdown viewer(reccomended) or as plain text. I reccomend VS Code <br>
+This is a .md file [Markdown file]. <br>
+View in a markdown viewer(reccomended) or as plain text. I reccomend using VS Code <br>
+
+## This guide is done by Lim Zi Xiong and Bryan Wong Wen Ping from Singapore Polytechnic.
+
+-------------------------------------
 
 # Preclude
 This Guide serves as a "wtf is going on" and serves to try and explain why things are done in X way and what things are being done. <br>
-It is meant to be comprehensive and explain why things are done. <br>
+It is meant to be comprehensive in showing how to use NSCC <br>
 
-These guides below are "how to" guides made by us, meant to get jobs running: (start from first) <br>
-Python_Singularity_Guide.md -> Guide to use tensorflow library and run python files <br>
-JupyterNoteBook_Guide.md -> Guide to setting up jupyter notebook server <br>
+These guides are "how to" guides, meant to get jobs running: (start from first in list) <br>
+For quick start, you can refer to these guides.
+* Python_Singularity_Guide.md -> Guide to use tensorflow library and run python files <br>
+* JupyterNoteBook_Guide.md -> Guide to setting up jupyter notebook server <br>
+
+Visual Guide:
+* [Visual step by step guide](./Step%20by%20step%20guide%20on%20how%20to%20access%20NSCC%20supercomputer%20and%20open%20up%20jupyter%20notebook.pdf)
 
 These are other usefull resources online: <br>
 * Official quick start guide by NSCC, [link](https://help.nscc.sg/pbspro-quickstartguide/)
 * NSCC [User Guides](https://help.nscc.sg/user-guide/)
 * NSCC [quick reference sheet](https://help.nscc.sg/wp-content/uploads/2016/08/PBS_Professional_Quick_Reference.pdf)
-* NSCC [faq page](https://help.nscc.sg/faqs/)
+* NSCC [FAQ page](https://help.nscc.sg/faqs/)
 * Guide to using dgx GPUs [link](https://help.nscc.sg/wp-content/uploads/AI_System_QuickStart.pdf) 
 
 # So whats actually happening?
@@ -60,14 +69,18 @@ Common Bash Commands:
 * `echo` => Prints to console(stdout) 
 * `env` => List all environment variables
 
+TIP: To get an overview on what a command does, use the `man` command or `--help` flag.
+* `man <command>` => opens manual for command
+* `<command> --help` => bring out help menu for command
+
 ## WinSCP, Transfering Files
 NSCC uses SFTP ([Secure File Transfer Protocol](https://en.wikipedia.org/wiki/File_Transfer_Protocol)) protocol to transfer files from host computer to NSCC. <br>
-Reccomended software to use is [WinSCP](https://winscp.net/eng/download.php) <br>
+Reccomended software that supports SFTP is [WinSCP](https://winscp.net/eng/download.php) <br>
 
-Therefore, we use WinSCP to tranfer bash scripts and python files to NSCC
+Therefore, we use WinSCP to tranfer bash scripts and other files such as python files to NSCC
 
 ## PBS Commands
-PBS has commands to submit, delete and track jobs.<br>
+PBS Pro has commands to submit, delete and track jobs.<br>
 NSCC has [guides](https://help.nscc.sg/pbspro-quickstartguide/) on how to use these commands,
 As well as a [quick reference sheet](https://help.nscc.sg/wp-content/uploads/2016/08/PBS_Professional_Quick_Reference.pdf).<br>
 
@@ -89,7 +102,8 @@ Some Common Commands:
 * `qstat`  => Find information about current jobs
 * `qstat -f <job_id>` => Full information of specific job
 <br>
-To view more info about commands  , use `<command> help`
+To view more info about commands  , use `<command> help`. \
+For a list of commands, refer to [quick reference sheet](https://help.nscc.sg/wp-content/uploads/2016/08/PBS_Professional_Quick_Reference.pdf)
 <br>
 
 ## PBS Queues
@@ -102,16 +116,17 @@ Examples:
 * GPU => use normal GPUs
 * dgx => use special dgx fast GPUs
 <br>
-Specifc documentation on queues can be found on pg.4 of [quick start guide](https://help.nscc.sg/pbspro-quickstartguide/) <br>
+Specifc documentation on queues can be found on pg.4 of [quick start guide](https://help.nscc.sg/pbspro-quickstartguide/) under external queues <br>
 
 
 ## Problem with pip install as no root access  
 Usually, when we add libraries for python, we enter into the command prompt `pip install <module>` or `conda install <module>`. <br>
-However if we `pip install <module>`, we get a permission error, as we end up trying to overwrite files we dont have permission to.
+However if we `pip install <module>`, we get a permission error, as we end up trying to overwrite files we dont have permission to. <br>
+pip modules are usually. installed in /usr/*** file, However we do not have access to that file location on NSCC. <br>
 
 Therefore, we have to use `pip install -U -q --user <module>`: 
 * `-U` => upgrade if possible
-* `-q` => preserve time stamps
+* `-q` => quiet installation, preserve time stamps
 * `--user` => install to user home directory instead of system directory (Installs in site.USER_SITE)
 [documentation](https://pip.pypa.io/en/stable/reference/pip_install/)
 
@@ -132,6 +147,61 @@ Commonly used commands:
 * `module remove/unload [module file]` => Remove/Unloads module
 * `module show [modulefile]`      => Shows what module file does to environment
 * `module whatis [modulefile]`    => Query what the module does
+
+----------
+# Accessing NSCC Login node
+
+## Visual Guide
+Its reccomended to follow first half of the visual guide. [Visual step by step guide](./Step%20by%20step%20guide%20on%20how%20to%20access%20NSCC%20supercomputer%20and%20open%20up%20jupyter%20notebook.pdf)
+
+## Steps Taken
+Download Sophos VPN from NSCC website. \
+Download Auth app on phone, reccomneded to download Sophos Authenticator. \
+Use App to Aceess VPN network. \
+Login to NSCC Login node using PuTTY. \
+
+----------
+# Run Basic Python script on NSCC as a queue.
+
+## Quick Guide 
+NSCC has made a [NSCC PBSPro Quick Start Guide](https://help.nscc.sg/pbspro-quickstartguide/) which can be followed.
+
+## Transfer files to NSCC
+Use WinSCP with this setting
+* Hostname: aspire.nscc.sg
+* PortNumber: 22
+* User name: <your_user_name>
+* Password: <leave bank, enter when required>
+
+Click and drag to copy files over.
+
+## Submitting Job using submission script.
+To submit a job.
+* `qsub submit.pbs`
+
+Where submit.pbs is :
+```
+#!/bin/bash
+
+#PBS –q normal
+#PBS –l select=1:ncpus=1:mem=100M
+#PBS –l walltime=00:10:00
+#PBS –N Sleep_Job
+#PBS -o ~/outputfiles/Sleep_Job.o
+#PBS –e ~/errorfiles/Sleep_Job.e
+
+echo sleep job for 30 seconds
+sleep 30
+
+```
+Of the format :
+```
+#!/bin/bash
+
+[#PBS Commands, specify configs about job.]
+
+[Rest of commands to run]
+```
 
 ----------
 # Running Python With Tensorflow
