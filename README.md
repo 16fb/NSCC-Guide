@@ -11,8 +11,8 @@ It is meant to be comprehensive in showing how to use NSCC <br>
 
 These guides are "how to" guides, meant to get jobs running: (start from first in list) <br>
 For quick start, you can refer to these guides.
-* Python_Singularity_Guide.md -> Guide to use tensorflow library and run python files <br>
-* JupyterNoteBook_Guide.md -> Guide to setting up jupyter notebook server <br>
+* Python_Singularity_Guide.md (RunPythonSingularity Folder) -> Guide to use tensorflow library and run python files <br>
+* JupyterNoteBook_Guide.md (RunJupyterSingularity FOlder) -> Guide to setting up jupyter notebook server <br>
 
 Visual Guide:
 * [Visual step by step guide](./Step%20by%20step%20guide%20on%20how%20to%20access%20NSCC%20supercomputer%20and%20open%20up%20jupyter%20notebook.pdf)
