@@ -1,0 +1,351 @@
+/home/users/industry/sp/wp_wong
+/home/users/industry/sp/wp_wong/Desktop
+Shell hostname:
+gpu1720
+Shell nvidia-smi:
+Tue Sep 29 15:50:36 2020       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 418.39       Driver Version: 418.39       CUDA Version: 10.1     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  Tesla K40t          On   | 00000000:82:00.0 Off |                    0 |
+| N/A   40C    P8    22W / 235W |      0MiB / 11441MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID   Type   Process name                             Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+Loading singularity module:
+View ENV Var of Shell:
+MODULE_VERSION_STACK=3.2.10
+MANPATH=/app/singularity/3.3.0/share/man:/usr/share/man/overrides:/usr/share/man/en:/usr/share/man:/usr/local/share/man:/opt/ddn/ime/share/man:/cm/local/apps/environment-modules/current/share/man:/opt/pbs/share/man
+HOSTNAME=gpu1720
+SHELL=/bin/bash
+HISTSIZE=1000
+PBS_JOBNAME=SingularityContainer
+TMPDIR=/var/tmp/pbs.2029974.wlm01
+PBS_ENVIRONMENT=PBS_BATCH
+OLDPWD=/home/users/industry/sp/wp_wong
+QTDIR=/usr/lib64/qt-3.3
+QTINC=/usr/lib64/qt-3.3/include
+PBS_O_WORKDIR=/home/users/industry/sp/wp_wong/Desktop
+NCPUS=5
+USER=wp_wong
+PBS_TASKNUM=1
+PBS_O_HOME=/home/users/industry/sp/wp_wong
+PBS_MOMPORT=15003
+PBS_O_QUEUE=gpu
+PATH=/app/singularity/.openmpi/bin:/app/singularity/3.3.0/bin:/app/pbs/bin:/app/pbs/bin:/usr/lib64/qt-3.3/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/ibutils/bin:/opt/ddn/ime/bin:/opt/pbs/bin:/home/users/industry/sp/wp_wong/bin
+PBS_O_LOGNAME=wp_wong
+MAIL=/var/spool/mail/wp_wong
+MODULE_VERSION=3.2.10
+PBS_O_LANG=en_US.UTF-8
+PBS_JOBCOOKIE=02E2C0CF22650DA9638B5DD12F366AAF
+PWD=/home/users/industry/sp/wp_wong/Desktop
+_LMFILES_=/app/modules/tools/singularity/latest
+PBS_NODENUM=0
+LANG=en_US.UTF-8
+MODULEPATH=/app/modules/tools:/app/modules/interpreters:/app/modules/bio:/app/modules/chem:/app/modules/earth:/app/modules/engineering:/app/modules/dev-intel:/app/modules/dev-gnu:/app/modules/dev-gpu:/app/modules/dev:/app/modules/sys:/app/modules/dev-java:/app/modules/physics:/app/modules/others
+NOTEBOOKPORT=8899
+TZ=Asia/Singapore
+PBS_JOBDIR=/home/users/industry/sp/wp_wong
+LOADEDMODULES=singularity/latest
+PBS_O_SHELL=/bin/bash
+PBS_JOBID=2029974.wlm01
+LM_LICENSE_FILE=28518@192.168.192.15:28518@192.168.192.14
+ENVIRONMENT=BATCH
+HISTCONTROL=ignoredups
+HOME=/home/users/industry/sp/wp_wong
+SHLVL=2
+I_MPI_HYDRA_BOOTSTRAP_EXEC=/opt/pbs/bin/pbs_tmrsh
+Hash=argon2:$argon2id$v=19$m=10240,t=10,p=8$7QOTfWRYvwnNRuV+cHfGbQ$Gu8NugEjIi9IUvRXdjYDlA
+PBS_O_HOST=nscc04
+SINGULARITY_IMAGES=/app/singularity/images
+LOGNAME=wp_wong
+CVS_RSH=ssh
+QTLIB=/usr/lib64/qt-3.3/lib
+PBS_QUEUE=gpunormal
+I_MPI_HYDRA_BOOTSTRAP=rsh
+MODULESHOME=/cm/local/apps/environment-modules/3.2.10/Modules/3.2.10
+PBS_O_MAIL=/var/spool/mail/wp_wong
+OMP_NUM_THREADS=5
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+PBS_O_SYSTEM=Linux
+PBS_NODEFILE=/var/spool/pbs/aux/2029974.wlm01
+G_BROKEN_FILENAMES=1
+SCRATCH=/scratch/users/industry/sp/wp_wong
+PBS_O_PATH=/app/pbs/bin:/app/CD-adapco/14.04.013/STAR-View+14.04.013/bin:/app/CD-adapco/14.04.013/STAR-CCM+14.04.013/star/bin:/app/pbs/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/ibutils/bin:/sbin:/usr/sbin:/opt/pbs/bin:/home/users/industry/sp/wp_wong/bin
+BASH_FUNC_module()=() {  eval `/cm/local/apps/environment-modules/3.2.10/Modules/$MODULE_VERSION/bin/modulecmd bash $*`
+}
+_=/bin/env
+
+image:
+/app/singularity/images/tensorflow/tensorflow_2.3.0_gpu_py3.simg
+NOTEBOOKPORT:
+8899
+Hash:
+argon2:$argon2id$v=19$m=10240,t=10,p=8$7QOTfWRYvwnNRuV+cHfGbQ$Gu8NugEjIi9IUvRXdjYDlA
+
+Container Hostname:
+gpu1720
+nvidia-smi:
+Tue Sep 29 15:50:37 2020       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 418.39       Driver Version: 418.39       CUDA Version: 10.1     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  Tesla K40t          On   | 00000000:82:00.0 Off |                    0 |
+| N/A   40C    P8    22W / 235W |      0MiB / 11441MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID   Type   Process name                             Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+Base working directory is:
+/home/users/industry/sp/wp_wong/Desktop
+Change directory to shells /home/users/industry/sp/wp_wong/Desktop:
+PWD is now:
+/home/users/industry/sp/wp_wong/Desktop
+Show all modules in container:
+Package                Version
+---------------------- ----------------------
+-ensorflow             2.0.0
+absl-py                0.8.1
+argon2-cffi            20.1.0
+astor                  0.8.0
+astroid                1.4.9
+astunparse             1.6.3
+attrs                  19.3.0
+auditwheel             2.0.0
+backcall               0.2.0
+bleach                 2.0.0
+cachetools             3.1.1
+certifi                2020.6.20
+cffi                   1.14.1
+chardet                3.0.4
+cycler                 0.10.0
+decorator              4.4.2
+defusedxml             0.6.0
+entrypoints            0.3
+future                 0.18.2
+gast                   0.3.3
+google-auth            1.7.1
+google-auth-oauthlib   0.4.1
+google-pasta           0.1.8
+grpcio                 1.25.0
+h5py                   2.10.0
+html5lib               1.0.1
+idna                   2.8
+importlib-metadata     1.7.0
+ipykernel              5.3.4
+ipython                7.16.1
+ipython-genutils       0.2.0
+ipywidgets             7.5.1
+isort                  4.3.21
+jedi                   0.17.2
+Jinja2                 2.11.2
+joblib                 0.16.0
+jsonschema             3.2.0
+jupyter                1.0.0
+jupyter-client         6.1.6
+jupyter-console        6.1.0
+jupyter-core           4.6.3
+Keras                  2.4.3
+Keras-Applications     1.0.8
+Keras-Preprocessing    1.1.2
+kiwisolver             1.2.0
+lazy-object-proxy      1.4.1
+Markdown               2.6.8
+MarkupSafe             1.1.1
+matplotlib             3.3.2
+mccabe                 0.6.1
+mistune                0.8.4
+nbconvert              5.6.1
+nbformat               5.0.7
+notebook               6.1.3
+numpy                  1.17.4
+oauthlib               3.1.0
+opt-einsum             3.1.0
+pandas                 1.1.2
+pandocfilters          1.4.2
+parso                  0.7.1
+pexpect                4.8.0
+pickleshare            0.7.5
+Pillow                 7.2.0
+pip                    20.2.2
+portpicker             1.3.1
+prometheus-client      0.8.0
+prompt-toolkit         3.0.6
+protobuf               3.12.4
+psutil                 5.6.3
+ptyprocess             0.6.0
+py-cpuinfo             5.0.0
+pyasn1                 0.4.8
+pyasn1-modules         0.2.7
+pycodestyle            2.5.0
+pycparser              2.20
+pycrypto               2.6.1
+pycurl                 7.43.0
+pyelftools             0.25
+Pygments               2.6.1
+pygobject              3.20.0
+pylint                 1.6.4
+pyparsing              2.4.7
+pyrsistent             0.16.0
+python-apt             1.1.0b1+ubuntu0.16.4.5
+python-dateutil        2.8.1
+pytz                   2019.3
+PyYAML                 5.3.1
+pyzmq                  19.0.2
+qtconsole              4.7.5
+QtPy                   1.9.0
+requests               2.22.0
+requests-oauthlib      1.3.0
+rsa                    4.0
+scikit-learn           0.23.2
+scipy                  1.4.1
+Send2Trash             1.5.0
+setuptools             39.1.0
+six                    1.12.0
+ssh                    1.8.0
+tb-nightly             2.1.0a20191118
+tensorboard            2.3.0
+tensorboard-plugin-wit 1.7.0
+tensorflow-estimator   2.3.0
+tensorflow-gpu         2.3.0
+termcolor              1.1.0
+terminado              0.8.3
+testpath               0.4.4
+tf-estimator-nightly   2.0.0.dev2019111809
+threadpoolctl          2.1.0
+tornado                6.0.4
+traitlets              4.3.3
+typing                 3.7.4.1
+urllib3                1.25.7
+virtualenv             16.7.7
+wcwidth                0.2.5
+webencodings           0.5.1
+Werkzeug               0.16.0
+wheel                  0.31.1
+widgetsnbextension     3.5.1
+wrapt                  1.11.2
+zipp                   3.1.0
+Should not maybe:
+Imported keras
+PATH in job shell:
+PATH=/app/singularity/.openmpi/bin:/app/singularity/3.3.0/bin:/app/pbs/bin:/app/pbs/bin:/usr/lib64/qt-3.3/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/ibutils/bin:/opt/ddn/ime/bin:/opt/pbs/bin:/home/users/industry/sp/wp_wong/bin
+
+PATH inside container:
+PATH=/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+Python version:
+Python 3.6.8
+Install keras and other modules inside container:
+
+List ENV var of container
+MODULE_VERSION_STACK=3.2.10
+MANPATH=/app/singularity/3.3.0/share/man:/usr/share/man/overrides:/usr/share/man/en:/usr/share/man:/usr/local/share/man:/opt/ddn/ime/share/man:/cm/local/apps/environment-modules/current/share/man:/opt/pbs/share/man
+CUDNN_VERSION=7.6.3.30
+HOSTNAME=gpu1720
+NVIDIA_REQUIRE_CUDA=cuda>=10.0 brand=tesla,driver>=384,driver<385 brand=tesla,driver>=410,driver<411
+SHELL=/bin/bash
+HISTSIZE=1000
+TMPDIR=/var/tmp/pbs.2029974.wlm01
+PBS_JOBNAME=SingularityContainer
+TF_NEED_CUDA=1
+LIBRARY_PATH=/usr/local/cuda/lib64/stubs
+PBS_ENVIRONMENT=PBS_BATCH
+SINGULARITY_APPNAME=
+QTDIR=/usr/lib64/qt-3.3
+QTINC=/usr/lib64/qt-3.3/include
+PBS_O_WORKDIR=/home/users/industry/sp/wp_wong/Desktop
+NCPUS=5
+USER_PATH=/app/singularity/.openmpi/bin:/app/singularity/3.3.0/bin:/app/pbs/bin:/app/pbs/bin:/usr/lib64/qt-3.3/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/ibutils/bin:/opt/ddn/ime/bin:/opt/pbs/bin:/home/users/industry/sp/wp_wong/bin:/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin:/usr/local/sbin
+PBS_TASKNUM=1
+USER=wp_wong
+NVIDIA_VISIBLE_DEVICES=all
+LD_LIBRARY_PATH=/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/.singularity.d/libs
+PBS_O_HOME=/home/users/industry/sp/wp_wong
+SINGULARITY_NAME=tensorflow_2.3.0_gpu_py3.simg
+NVIDIA_DRIVER_CAPABILITIES=compute,utility
+PBS_MOMPORT=15003
+PBS_O_QUEUE=gpu
+PBS_O_LOGNAME=wp_wong
+MODULE_VERSION=3.2.10
+PATH=/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+MAIL=/var/spool/mail/wp_wong
+PBS_O_LANG=en_US.UTF-8
+PBS_JOBCOOKIE=02E2C0CF22650DA9638B5DD12F366AAF
+PWD=/home/users/industry/sp/wp_wong/Desktop
+_LMFILES_=/app/modules/tools/singularity/latest
+PBS_NODENUM=0
+LANG=en_US.UTF-8
+MODULEPATH=/app/modules/tools:/app/modules/interpreters:/app/modules/bio:/app/modules/chem:/app/modules/earth:/app/modules/engineering:/app/modules/dev-intel:/app/modules/dev-gnu:/app/modules/dev-gpu:/app/modules/dev:/app/modules/sys:/app/modules/dev-java:/app/modules/physics:/app/modules/others
+NOTEBOOKPORT=8899
+TZ=Asia/Singapore
+LOADEDMODULES=singularity/latest
+PBS_JOBDIR=/home/users/industry/sp/wp_wong
+CUDA_PKG_VERSION=10-0=10.0.130-1
+CUDA_VERSION=10.0.130
+PBS_O_SHELL=/bin/bash
+LM_LICENSE_FILE=28518@192.168.192.15:28518@192.168.192.14
+PBS_JOBID=2029974.wlm01
+HISTCONTROL=ignoredups
+ENVIRONMENT=BATCH
+HOME=/home/users/industry/sp/wp_wong
+SHLVL=3
+I_MPI_HYDRA_BOOTSTRAP_EXEC=/opt/pbs/bin/pbs_tmrsh
+PBS_O_HOST=nscc04
+Hash=argon2:$argon2id$v=19$m=10240,t=10,p=8$7QOTfWRYvwnNRuV+cHfGbQ$Gu8NugEjIi9IUvRXdjYDlA
+NCCL_VERSION=2.4.8
+LOGNAME=wp_wong
+QTLIB=/usr/lib64/qt-3.3/lib
+CVS_RSH=ssh
+PBS_QUEUE=gpunormal
+MODULESHOME=/cm/local/apps/environment-modules/3.2.10/Modules/3.2.10
+I_MPI_HYDRA_BOOTSTRAP=rsh
+OMP_NUM_THREADS=5
+PBS_O_MAIL=/var/spool/mail/wp_wong
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+SINGULARITY_CONTAINER=/app/singularity/images/tensorflow/tensorflow_2.3.0_gpu_py3.simg
+PBS_O_SYSTEM=Linux
+SCRATCH=/scratch/users/industry/sp/wp_wong
+G_BROKEN_FILENAMES=1
+PBS_NODEFILE=/var/spool/pbs/aux/2029974.wlm01
+PBS_O_PATH=/app/pbs/bin:/app/CD-adapco/14.04.013/STAR-View+14.04.013/bin:/app/CD-adapco/14.04.013/STAR-CCM+14.04.013/star/bin:/app/pbs/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/ibutils/bin:/sbin:/usr/sbin:/opt/pbs/bin:/home/users/industry/sp/wp_wong/bin
+_=/usr/bin/env
+OLDPWD=/home/users/industry/sp/wp_wong/Desktop
+
+NoteBookPort as per shell is:
+8899
+
+Hash with backslash:
+argon2:$argon2id$v=19$m=10240,t=10,p=8$7QOTfWRYvwnNRuV+cHfGbQ$Gu8NugEjIi9IUvRXdjYDlA
+
+Running Jupyter Notebook Server:
+======================================================================================
+
+			Resource Usage on 2020-09-29 16:02:24.574448:
+
+	JobId: 2029974.wlm01  
+	Project: personal-wp_wong 
+	Exit Status: 271
+	NCPUs Requested: 5				NCPUs Used: 5
+							CPU Time Used: 00:00:31
+	Memory Requested: 110100480kb 				Memory Used: 232580kb
+							Vmem Used: 1823424kb
+	Walltime requested: 02:00:00 			Walltime Used: 00:11:48
+	
+	Execution Nodes Used: (gpu1720:ncpus=5:ngpus=1)
+	
+ ======================================================================================

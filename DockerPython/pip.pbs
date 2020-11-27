@@ -1,0 +1,114 @@
+#!/bin/sh
+
+### The following requests a single GPU
+#PBS -l select=1:ncpus=5:ngpus=1
+
+### The "select=1" specifies the number of nodes
+### To ask for a whle node add "ncpus=40:ngpus=8"
+### If you request less than 8 GPU then make the ncpus value
+###   five times the ngpus value, e.g. select=1:ncpus=5:ngpus=1
+
+### Specify amount of time required (maximum 24 hours)
+#PBS -l walltime=0:15:00
+
+### Select correct queue
+#PBS -q dgx
+
+### Specify project code
+#PBS -P 50000163
+
+### Specify name for job
+#PBS -N pip
+
+
+### Start of commands to be run
+
+# Docker image to use for container
+#   To see available images run command: nscc-docker images
+image="nvcr.io/nvidia/tensorflow:latest"
+
+# Change to directory where job was submitted
+cd "$PBS_O_WORKDIR" || exit $?
+echo Directory where job was submitted:
+pwd
+echo
+
+# Show
+echo Docker Image Used:
+echo $image
+
+echo List of installed pip modules in shell:
+pip list 
+echo
+
+echo Shell env:
+env
+echo
+
+
+# The "nscc-docker run $image" command runs the following Docker command: 
+#    nvidia-docker run -u UID:GID --group-add PROJECT \
+#      -v /home:/home -v /scratch:/scratch -v /raid:/raid \
+#      --rm -i --shm-size=1g --ulimit memlock=-1 --ulimit stack=67108864 $image /bin/sh
+# See full list of options with "nscc-docker run -h"
+# Pass the commands that you wish to run inside the container on the standard input
+nscc-docker run $image << EOF
+echo
+echo hostname:
+hostname
+echo
+nvidia-smi
+echo
+echo Base working directory is:
+pwd
+echo
+
+echo List of installed pip modules in container:
+pip list 
+echo
+
+echo Docker Container env:
+env
+echo
+
+# If using the <<EOF syntax then variables are expanded immediately before passing to docker.
+# Therefore PBS_O_WORKDIR in the following line will be taken from the setting in the job shell
+
+echo Change directory to shells "$PBS_O_WORKDIR":
+cd "$PBS_O_WORKDIR"
+pwd
+
+#echo should fail:
+#python -c "import keras;print('Imported keras')"
+
+echo set env variable PYTHONUSERBASE
+# set environment variable to install packages to world-writable location inside container
+export PYTHONUSERBASE=/workspace/.local
+# Escaping PYTHONUSERBASE in the next line so that it is expanded inside docker and take the value set inside the container
+echo adding pythonuserbase to path
+mkdir -p \$PYTHONUSERBASE/bin
+export PATH=\$PATH:\$PYTHONUSERBASE/bin
+echo PATH in job shell:
+echo PATH=$PATH
+echo PATH inside container:
+echo PATH=\$PATH
+echo install keras inside container
+pip install -U -q --user keras
+echo should work:
+python -c "import keras;print('Imported keras')"
+
+echo python version
+python --version
+#python3 --version
+
+### PIP INSTALL MODULES
+echo Install keras and other modules inside container:
+pip install -U -q --user keras
+pip install -U -q --user matplotlib
+
+echo Running python file:
+python MNISTDataset.py
+
+### options to read requirements from file and disable the message warning about pip version:
+## pip install -U -q --disable-pip-version-check --user -r reqs.txt
+EOF

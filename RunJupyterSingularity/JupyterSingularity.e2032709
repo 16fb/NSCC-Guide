@@ -1,0 +1,16 @@
+[33mWARNING:[0m underlay of /usr/bin/nvidia-smi required more than 50 (450) bind mounts
+WARNING: You are using pip version 20.2.2; however, version 20.2.3 is available.
+You should consider upgrading via the '/usr/bin/python3 -m pip install --upgrade pip' command.
+2020-09-30 11:23:21.304391: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'libcudart.so.10.1'; dlerror: libcudart.so.10.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/nvidia/lib:/usr/local/nvidia/lib64:/.singularity.d/libs
+2020-09-30 11:23:21.304432: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+WARNING: You are using pip version 20.2.2; however, version 20.2.3 is available.
+You should consider upgrading via the '/usr/bin/python3 -m pip install --upgrade pip' command.
+WARNING: You are using pip version 20.2.2; however, version 20.2.3 is available.
+You should consider upgrading via the '/usr/bin/python3 -m pip install --upgrade pip' command.
+[I 11:23:38.125 NotebookApp] Serving notebooks from local directory: /home/users/industry/sp/wp_wong/Desktop
+[I 11:23:38.125 NotebookApp] Jupyter Notebook 6.1.3 is running at:
+[I 11:23:38.125 NotebookApp] http://gpu1932:8899/
+[I 11:23:38.125 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 13:20:07.753 NotebookApp] received signal 15, stopping
+[I 13:20:07.759 NotebookApp] Shutting down 0 kernels
+[I 13:20:07.759 NotebookApp] Shutting down 0 terminals

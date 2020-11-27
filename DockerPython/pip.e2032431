@@ -1,0 +1,60 @@
+/var/spool/pbs/mom_priv/jobs/2032431.wlm01.SC: 41: /var/spool/pbs/mom_priv/jobs/2032431.wlm01.SC: pip: not found
+WARNING: You are using pip version 20.0.2; however, version 20.2.3 is available.
+You should consider upgrading via the '/usr/bin/python -m pip install --upgrade pip' command.
+WARNING: You are using pip version 20.0.2; however, version 20.2.3 is available.
+You should consider upgrading via the '/usr/bin/python -m pip install --upgrade pip' command.
+2020-09-30 11:09:33.960529: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.2
+Traceback (most recent call last):
+  File "/workspace/.local/lib/python3.6/site-packages/keras/__init__.py", line 3, in <module>
+    from tensorflow.keras.layers.experimental.preprocessing import RandomRotation
+ModuleNotFoundError: No module named 'tensorflow.keras.layers.experimental.preprocessing'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/workspace/.local/lib/python3.6/site-packages/keras/__init__.py", line 6, in <module>
+    'Keras requires TensorFlow 2.2 or higher. '
+ImportError: Keras requires TensorFlow 2.2 or higher. Install TensorFlow via `pip install tensorflow`
+WARNING: You are using pip version 20.0.2; however, version 20.2.3 is available.
+You should consider upgrading via the '/usr/bin/python -m pip install --upgrade pip' command.
+WARNING: You are using pip version 20.0.2; however, version 20.2.3 is available.
+You should consider upgrading via the '/usr/bin/python -m pip install --upgrade pip' command.
+2020-09-30 11:09:41.853772: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.2
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+2020-09-30 11:09:44.386443: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2020-09-30 11:09:44.456226: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1639] Found device 0 with properties: 
+name: Tesla V100-SXM2-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:06:00.0
+2020-09-30 11:09:44.456286: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.2
+2020-09-30 11:09:44.458517: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2020-09-30 11:09:44.460585: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2020-09-30 11:09:44.461028: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2020-09-30 11:09:44.463674: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2020-09-30 11:09:44.465196: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2020-09-30 11:09:44.470003: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-09-30 11:09:44.473964: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1767] Adding visible gpu devices: 0
+2020-09-30 11:09:44.512834: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2195085000 Hz
+2020-09-30 11:09:44.519934: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5b116f0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-09-30 11:09:44.519993: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2020-09-30 11:09:44.687708: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x548b7b0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2020-09-30 11:09:44.687742: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-SXM2-16GB, Compute Capability 7.0
+2020-09-30 11:09:44.689648: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1639] Found device 0 with properties: 
+name: Tesla V100-SXM2-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:06:00.0
+2020-09-30 11:09:44.689704: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.2
+2020-09-30 11:09:44.689743: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2020-09-30 11:09:44.689771: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2020-09-30 11:09:44.689784: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2020-09-30 11:09:44.689797: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2020-09-30 11:09:44.689810: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2020-09-30 11:09:44.689831: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-09-30 11:09:44.692827: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1767] Adding visible gpu devices: 0
+2020-09-30 11:09:44.692895: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.2
+2020-09-30 11:09:45.125971: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1180] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-09-30 11:09:45.126022: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1186]      0 
+2020-09-30 11:09:45.126039: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1199] 0:   N 
+2020-09-30 11:09:45.129580: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1325] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14767 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-16GB, pci bus id: 0000:06:00.0, compute capability: 7.0)
+2020-09-30 11:09:45.603968: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
