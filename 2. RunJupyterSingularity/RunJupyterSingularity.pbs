@@ -21,7 +21,7 @@
 ### Start of commands to be run
 
 # Singularity image to use for container
-image="/app/singularity/images/tensorflow/tensorflow_2.3.0_gpu_py3.simg"
+image="/home/app/singularity/images/tensorflow/tensorflow_2.3.0_gpu_py3.simg"
 
 ### We need export these environment variables to container
 # NoteBook Port Between 8000 and 9999
