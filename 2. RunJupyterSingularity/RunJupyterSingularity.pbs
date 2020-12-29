@@ -125,7 +125,7 @@ echo
 
 ### Run jupyter notebook 
 echo Running Jupyter Notebook Server:
-jupyter notebook --NotebookApp.password=\$Hash --no-browser --port=$NOTEBOOKPORT --ip=0.0.0.0
+jupyter notebook --NotebookApp.password='$Hash' --no-browser --port=$NOTEBOOKPORT --ip=0.0.0.0
 
 
 

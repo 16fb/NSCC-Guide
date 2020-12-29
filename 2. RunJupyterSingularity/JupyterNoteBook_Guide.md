@@ -16,7 +16,7 @@ Copy and Note down the hash and remember your password
 ## Step 2) Setup Bash Script
 In the Bash Script, Modify Params: <br />
 Choose + Set singularity image to use (In this case we using tensorflow 2.3 library)
-1. `image="/app/singularity/images/tensorflow/tensorflow_2.3.0_gpu_py3.simg"`
+1. `image="/home/app/singularity/images/tensorflow/tensorflow_2.3.0_gpu_py3.simg"`
 
 Set NOTEBOOKPORT (Any number between 8000 and 9999 is fine)
 1. `export NOTEBOOKPORT=8899`
@@ -55,9 +55,9 @@ Once job is running(Status = R), <br />
 Obtain the job id (7 digits usually) and check full stats using the command
 1. qstat -f `<job_id>`
 
-Find the hostname of the node under EXEC_1720 env variable
-and note it down
-<br />
+Find the hostname of the node under EXEC_1720 env variable and note it down <br />
+The Variable can be under exec_host, Ignore "/0.5", only take down the gpu digits. <br>
+ gpu2035 -> gpu2035-ib0 <br>
 
 ## Step 6) Establish SSH connection from computer to jupyter notebook
 Open up a Linux terminal on Local Computer and use the ssh command,
